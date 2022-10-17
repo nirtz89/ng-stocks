@@ -1,0 +1,34 @@
+<nz-card style="min-width: 250px" [nzCover]="coverTemplate">
+    <nz-card-meta
+      nzTitle="{{name}}"
+      nzDescription="Change: {{change}} $ ({{changePercent > 0 ? '+' : '-'}}{{changePercent}}%)"
+    ></nz-card-meta>
+    <nz-statistic
+              nz-popover
+              [nzPopoverContent]="contentTemplate"
+              [ngClass]="{'stats': true, 'flash': isFlashPrice}"
+              [nzValue]="(price | number: '1.0-2')!"
+              [nzSuffix]="'$'"
+              nzPopoverPlacement="bottom"
+              [nzValueTemplate]="template"
+              [nzValueStyle]="{ color: change > 0 ? '#69da3f' : '#ff636f' }"
+    ></nz-statistic>
+    <ng-template #coverTemplate>
+        <div alt="cover" style="height: 80px; background-size: cover !important; background-position-y: -25px !important; background: url('{{image}}')"></div>
+    </ng-template>
+    <ng-template #template>
+            <span nz-icon nzType="{{price > 0 ? 'arrow-up' : 'arrow-down'}}" nzTheme="outline"></span> {{price}}
+    </ng-template>
+    <ng-template #titleTemplate>
+        <span nz-icon nzType="close"></span>
+        Title
+      </ng-template>
+      <ng-template #contentTemplate>
+        <nz-list nzSize="small" style="width: 230px">
+            <nz-list-item>High price (today): {{dayHigh}} $</nz-list-item>
+            <nz-list-item>Low price (today): {{dayLow}} $</nz-list-item>
+            <nz-list-item>Open price (today): {{open}} $</nz-list-item>
+            <nz-list-item>Previous close price: {{previousClose}} $</nz-list-item>
+        </nz-list>
+      </ng-template>    
+</nz-card>

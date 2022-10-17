@@ -1,1 +1,38 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~ng-zorro-antd/ng-zorro-antd.min.css";
+
+body {
+    background: rgb(25,25,33);
+    background: radial-gradient(circle, rgba(44,39,55,1) 0%, rgba(25,25,33,1) 52%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ant-card {
+    background: #313547;
+    border: 1px solid #313547;
+
+    .ant-card-meta-title {
+        color: #fff;
+    }
+
+    .ant-card-meta-description {
+        color: #fff;
+    }
+}
+
+.ant-popover {
+    opacity: 0.95;
+}
+
+.ant-popover-inner {
+    background: #181820;
+}
+
+.ant-popover-arrow-content::before, .ant-popover-arrow-content {
+    background: #181820;
+}
+
+.ant-list-item {
+    color: #fff;
+}

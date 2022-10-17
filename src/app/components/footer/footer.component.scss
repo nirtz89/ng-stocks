@@ -1,0 +1,11 @@
+:host {
+    grid-column: span 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+span {
+    color: #fff;
+    opacity: 0.75;
+}

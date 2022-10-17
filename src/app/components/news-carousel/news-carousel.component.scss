@@ -1,0 +1,24 @@
+:host {
+    background: #313547;
+    grid-column: span 3;
+}
+
+[nz-carousel-content] {
+    text-align: center;
+    height: 160px;
+    background: #313547;
+    color: #fff;
+    overflow: hidden;
+    width: 1000px;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+}
+
+h3 {
+    color: #fff;
+    margin-bottom: 0;
+    user-select: none;
+}
