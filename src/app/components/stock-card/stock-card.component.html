@@ -1,7 +1,7 @@
 <nz-card style="min-width: 250px" [nzCover]="coverTemplate">
     <nz-card-meta
       nzTitle="{{name}}"
-      nzDescription="Change: {{change}} $ ({{changePercent > 0 ? '+' : '-'}}{{changePercent}}%)"
+      nzDescription="Change: {{change}} $ ({{changePercent > 0 && '+'}}{{changePercent}}%)"
     ></nz-card-meta>
     <nz-statistic
               nz-popover
