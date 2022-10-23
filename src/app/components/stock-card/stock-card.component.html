@@ -1,7 +1,7 @@
 <nz-card style="min-width: 250px" [nzCover]="coverTemplate">
     <nz-card-meta
       nzTitle="{{name}}"
-      nzDescription="Change: {{change}} $ ({{changePercent > 0 && '+'}}{{changePercent}}%)"
+      nzDescription="Change: {{change}} $ ({{changePercent > 0 ? '+' : ''}}{{changePercent}}%)"
     ></nz-card-meta>
     <nz-statistic
               nz-popover
@@ -17,7 +17,7 @@
         <div alt="cover" style="height: 80px; background-size: cover !important; background-position-y: -25px !important; background: url('{{image}}')"></div>
     </ng-template>
     <ng-template #template>
-            <span nz-icon nzType="{{price > 0 ? 'arrow-up' : 'arrow-down'}}" nzTheme="outline"></span> {{price}}
+            <span nz-icon nzType="{{change > 0 ? 'arrow-up' : 'arrow-down'}}" nzTheme="outline"></span> {{price}}
     </ng-template>
     <ng-template #titleTemplate>
         <span nz-icon nzType="close"></span>
